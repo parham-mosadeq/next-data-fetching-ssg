@@ -8,7 +8,15 @@ export async function getAllPost() {
 
 export async function getUserIdPosts(userId) {
   const allPosts = await getAllPost();
-  console.log(userId);
   const filteredPosts = allPosts.filter((post) => post.userId === +userId);
   return filteredPosts;
+}
+
+export async function getAllUsers() {
+  const allUsers = [];
+  const allPosts = await getAllPost();
+
+  allPosts.map((user) => allUsers.push(user.userId));
+
+  return allUsers;
 }

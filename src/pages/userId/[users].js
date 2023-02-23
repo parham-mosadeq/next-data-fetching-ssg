@@ -1,6 +1,6 @@
 import { getAllPost, getUserIdPosts } from '@/api/api-utils';
-import BackBtn from '@/components/BackBtn';
-import PostsItems from '@/components/PostsItems';
+import BackBtn from '@/components/shared/BackBtn';
+import PostsItems from '@/components/shared/PostsItems';
 
 const UserIdHomePage = (props) => {
   return (

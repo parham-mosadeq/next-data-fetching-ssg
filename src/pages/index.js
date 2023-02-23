@@ -1,7 +1,6 @@
 import { getAllPost } from '@/api/api-utils';
-import PostsItems from '@/components/PostsItems';
+import PostsItems from '@/components/shared/PostsItems';
 const HomePage = (props) => {
-  // console.log(props);
   return (
     <div>
       <h1>homepage</h1>
