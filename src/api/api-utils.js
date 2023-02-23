@@ -15,8 +15,6 @@ export async function getUserIdPosts(userId) {
 export async function getAllUsers() {
   const allUsers = [];
   const allPosts = await getAllPost();
-
   allPosts.map((user) => allUsers.push(user.userId));
-
   return allUsers;
 }

@@ -1,10 +1,17 @@
 import { getAllPost, getUserIdPosts } from '@/api/api-utils';
 import BackBtn from '@/components/shared/BackBtn';
 import PostsItems from '@/components/shared/PostsItems';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const UserIdHomePage = (props) => {
+  const router = useRouter();
+
   return (
     <div>
+      <Head>
+        <title>Users | User {router.query.users}</title>
+      </Head>
       <h1>UserIdHomePage</h1>
       <div>
         <PostsItems posts={props.filteredUsers} />
